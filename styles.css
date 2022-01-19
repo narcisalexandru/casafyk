@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.containter {
+    margin: 2;
+    padding: 2;
+}
+body {
+    background-color: white;
+}
+
+#bannerimage {
+    width: 100%;
+    background-image: url(casa.png);
+    height: 850px;
+    position: fixed;
+    background-color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: lightslategrey;
+    -webkit-box-shadow: 0px 10px 5px lightgrey;
+}
+@media only screen and (max-width:576px) {
+    #bannerimage {
+        width:100%;
+        background-image: url(casa.png);
+        height: 915px;
+        position: fixed;
+        background-color: transparent;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        box-shadow: lightslategrey;
+        -webkit-box-shadow: 0px 10px 5px lightgrey;
+    }
+}
