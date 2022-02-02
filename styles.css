@@ -1,21 +1,20 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
 }
-.containter {
-    margin: 2;
-    padding: 2;
-}
+
 body {
     background-color: white;
 }
 
 #bannerimage {
+    overflow: hidden;
     width: 100%;
     background-image: url(casa.png);
     height: 850px;
-    position: fixed;
     background-color: white;
     background-position: center;
     background-repeat: no-repeat;
@@ -25,15 +24,219 @@ body {
 }
 @media only screen and (max-width:576px) {
     #bannerimage {
+        overflow: hidden;
         width:100%;
         background-image: url(casa.png);
         height: 915px;
-        position: fixed;
         background-color: transparent;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
         box-shadow: lightslategrey;
         -webkit-box-shadow: 0px 10px 5px lightgrey;
+    }
+}
+header {
+    width: 100%;
+}
+.logo{
+    padding: 3px;
+    background-repeat: no-repeat;
+    width: 65px;
+    height: 65px;
+    position: fixed;
+}
+.logo-name {
+    display: none;
+    position: fixed;
+    padding: 5px;
+    margin: 5px;
+    font-family:'Aclonica', sans-serif;
+    color: black;
+    text-decoration-line: none;
+    justify-content: space-around;
+}
+.logo-name ul {
+    list-style: none;
+}
+.navbar {
+    background-color: transparent;
+    padding: 2px;
+    margin: 2px;
+    margin-top: 3px;
+    position: fixed;
+    left: 60%;
+    display: flex;
+    justify-content: space-between;
+    white-space: nowrap;
+}
+.navbar-links ul {
+    display: inline-flex;
+    margin: 0px;
+    padding: 0px;
+    justify-content: space-between;
+}
+.navbar-links li {
+    list-style: none;
+}
+.navbar-links li a {
+    display: block;
+    padding: 16px;
+    justify-content: space-between;
+    font-family: 'Aclonica', sans-serif;
+    color: black;
+    text-decoration-line: none;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.navbar-links li a:hover {
+    background-color: rgba(201, 159, 250, 0.2);
+    transition: .3s all;
+}
+
+.toggle-button {
+    position: flex;
+    top: .75rem;
+    right: 16px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+
+@media only screen and (max-width: 1400px) {
+    .navbar {
+        left: 50%;
+    }
+   
+}
+
+@media only screen and (max-width: 1200px) {
+    .navbar {
+        left: 45%;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .navbar {
+        left: 28%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar {
+        left: 25%;
+    }
+    .navbar-links li a {
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .toggle-button {
+        display:flex;
+        margin-left: 520px;
+        margin-top: 10px; 
+    }
+    .logo {
+        display: none;
+    }
+    .logo-name {
+        display: flex;
+    }
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        left: -10px;
+        margin-left: 20px;
+    }
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+        margin-top: 15px;
+    }
+    .navbar-links li a {
+        padding: .5rem 1rem;
+    }
+    .navbar-links.active {
+        display: flex;
+    }
+}
+@media only screen and (max-width: 425px) {
+    .toggle-button {
+        display:flex;
+        margin-left: 370px;
+        margin-top: 10px; 
+    }
+    .logo {
+        display: none;
+    }
+    .logo-name {
+        display: flex;
+    }
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        left: -10px;
+    }
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+    .navbar-links li a {
+        padding: .5rem 1rem;
+    }
+    .navbar-links.active {
+        display: flex;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .toggle-button {
+        display:flex;
+        margin-left: 320px;
+        margin-top: 10px; 
+    }
+    .logo {
+        display: none;
+    }
+    .logo-name {
+        display: flex;
+    }
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        left: -10px;
+    }
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+    .navbar-links li a {
+        padding: .5rem 1rem;
+    }
+    .navbar-links.active {
+        display: flex;
     }
 }
